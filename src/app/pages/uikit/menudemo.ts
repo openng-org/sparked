@@ -52,7 +52,7 @@ import { InputIcon, InputIconModule } from '@openng/optimus-ui/inputicon';
 
         <div class="card">
             <div class="font-semibold text-xl mb-4">Breadcrumb</div>
-            <p-breadcrumb [model]="breadcrumbItems" [home]="breadcrumbHome"></p-breadcrumb>
+            <p-breadcrumb [model]="breadcrumbItems" [home]="breadcrumbHome" />
         </div>
 
         <div class="flex flex-col md:flex-row gap-8">
@@ -86,26 +86,26 @@ import { InputIcon, InputIconModule } from '@openng/optimus-ui/inputicon';
             <div class="md:w-1/3">
                 <div class="card">
                     <div class="font-semibold text-xl mb-4">Tiered Menu</div>
-                    <p-tieredmenu [model]="tieredMenuItems"></p-tieredmenu>
+                    <p-tieredmenu [model]="tieredMenuItems" />
                 </div>
             </div>
             <div class="md:w-1/3">
                 <div class="card">
                     <div class="font-semibold text-xl mb-4">Plain Menu</div>
-                    <p-menu [model]="menuItems"></p-menu>
+                    <p-menu [model]="menuItems" />
                 </div>
             </div>
             <div class="md:w-1/3">
                 <div class="card">
                     <div class="font-semibold text-xl mb-4">Overlay Menu</div>
-                    <p-menu #menu [popup]="true" [model]="overlayMenuItems"></p-menu>
+                    <p-menu #menu [popup]="true" [model]="overlayMenuItems" />
                     <button type="button" pButton icon="pi pi-chevron-down" label="Options" (click)="menu.toggle($event)" style="width:auto"></button>
                 </div>
 
                 <div class="card" #anchor>
                     <div class="font-semibold text-xl mb-4">Context Menu</div>
                     Right click to display.
-                    <p-contextmenu [target]="anchor" [model]="contextMenuItems"></p-contextmenu>
+                    <p-contextmenu [target]="anchor" [model]="contextMenuItems" />
                 </div>
             </div>
         </div>

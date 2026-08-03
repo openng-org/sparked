@@ -12,7 +12,7 @@ import { NodeService } from '@/app/pages/service/node.service';
     template: `
         <div class="card">
             <div class="font-semibold text-xl">Tree</div>
-            <p-tree [value]="treeValue()" selectionMode="checkbox" [(selection)]="selectedTreeValue"></p-tree>
+            <p-tree [value]="treeValue()" selectionMode="checkbox" [(selection)]="selectedTreeValue" />
         </div>
 
         <div class="card">

@@ -13,8 +13,8 @@ import { SplitButtonModule } from '@openng/optimus-ui/splitbutton';
             <div class="card flex flex-col gap-4">
                 <div class="font-semibold text-xl">Default</div>
                 <div class="flex flex-wrap gap-2">
-                    <p-button label="Submit"></p-button>
-                    <p-button label="Disabled" [disabled]="true"></p-button>
+                    <p-button label="Submit" />
+                    <p-button label="Disabled" [disabled]="true" />
                     <p-button label="Link" class="p-button-link" />
                 </div>
             </div>
@@ -70,14 +70,14 @@ import { SplitButtonModule } from '@openng/optimus-ui/splitbutton';
             <div class="card flex flex-col gap-4">
                 <div class="font-semibold text-xl">SplitButton</div>
                 <div class="flex flex-wrap gap-2">
-                    <p-splitbutton label="Save" [model]="items"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="secondary"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="success"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="info"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="warn"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="help"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="danger"></p-splitbutton>
-                    <p-splitbutton label="Save" [model]="items" severity="contrast"></p-splitbutton>
+                    <p-splitbutton label="Save" [model]="items" />
+                    <p-splitbutton label="Save" [model]="items" severity="secondary" />
+                    <p-splitbutton label="Save" [model]="items" severity="success" />
+                    <p-splitbutton label="Save" [model]="items" severity="info" />
+                    <p-splitbutton label="Save" [model]="items" severity="warn" />
+                    <p-splitbutton label="Save" [model]="items" severity="help" />
+                    <p-splitbutton label="Save" [model]="items" severity="danger" />
+                    <p-splitbutton label="Save" [model]="items" severity="contrast" />
                 </div>
             </div>
             <div class="card flex flex-col gap-4">
@@ -97,9 +97,9 @@ import { SplitButtonModule } from '@openng/optimus-ui/splitbutton';
             <div class="card flex flex-col gap-4">
                 <div class="font-semibold text-xl">Icons</div>
                 <div class="flex flex-wrap gap-2">
-                    <p-button icon="pi pi-bookmark"></p-button>
-                    <p-button label="Bookmark" icon="pi pi-bookmark"></p-button>
-                    <p-button label="Bookmark" icon="pi pi-bookmark" iconPos="right"></p-button>
+                    <p-button icon="pi pi-bookmark" />
+                    <p-button label="Bookmark" icon="pi pi-bookmark" />
+                    <p-button label="Bookmark" icon="pi pi-bookmark" iconPos="right" />
                 </div>
             </div>
             <div class="card flex flex-col gap-4">

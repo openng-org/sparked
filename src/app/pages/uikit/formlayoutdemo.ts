@@ -71,7 +71,7 @@ import { TextareaModule } from '@openng/optimus-ui/textarea';
                             <label for="lastname1" class="sr-only">Lastname</label>
                             <input pInputText id="lastname1" type="text" placeholder="Lastname" />
                         </div>
-                        <p-button label="Submit" [fluid]="false"></p-button>
+                        <p-button label="Submit" [fluid]="false" />
                     </div>
                 </div>
                 <div class="card flex flex-col gap-4">
@@ -107,7 +107,7 @@ import { TextareaModule } from '@openng/optimus-ui/textarea';
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="flex flex-wrap gap-2 w-full">
                         <label for="state">State</label>
-                        <p-select id="state" [(ngModel)]="dropdownItem" [options]="dropdownItems" optionLabel="name" placeholder="Select One" class="w-full"></p-select>
+                        <p-select id="state" [(ngModel)]="dropdownItem" [options]="dropdownItems" optionLabel="name" placeholder="Select One" class="w-full" />
                     </div>
                     <div class="flex flex-wrap gap-2 w-full">
                         <label for="zip">Zip</label>

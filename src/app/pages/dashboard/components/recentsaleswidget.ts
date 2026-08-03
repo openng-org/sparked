@@ -15,8 +15,8 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
             <ng-template #header>
                 <tr>
                     <th>Image</th>
-                    <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
-                    <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon></th>
+                    <th pSortableColumn="name">Name <p-sortIcon field="name" /></th>
+                    <th pSortableColumn="price">Price <p-sortIcon field="price" /></th>
                     <th>View</th>
                 </tr>
             </ng-template>
@@ -42,6 +42,6 @@ export class RecentSalesWidget {
     productService = inject(ProductService);
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products.set(data)));
+        this.productService.getProductsSmall().then((data) => this.products.set(data));
     }
 }

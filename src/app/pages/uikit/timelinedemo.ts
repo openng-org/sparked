@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {TimelineModule} from '@openng/optimus-ui/timeline';
-import {CardModule} from '@openng/optimus-ui/card';
-import {CommonModule} from '@angular/common';
-import {ButtonModule} from '@openng/optimus-ui/button';
+import { Component } from '@angular/core';
+import { TimelineModule } from '@openng/optimus-ui/timeline';
+import { CardModule } from '@openng/optimus-ui/card';
+import { CommonModule } from '@angular/common';
+import { ButtonModule } from '@openng/optimus-ui/button';
 
 @Component({
     selector: 'app-timeline-demo',
@@ -63,8 +63,8 @@ import {ButtonModule} from '@openng/optimus-ui/button';
                     </ng-template>
                     <ng-template #content let-event>
                         <p-card [header]="event.status" [subheader]="event.date">
-                            @if(event.image) {
-                                 <img [src]="'/demo/images/product/' + event.image" [alt]="event.name" width="200" class="shadow" />
+                            @if (event.image) {
+                                <img [src]="'/demo/images/product/' + event.image" [alt]="event.name" width="200" class="shadow" />
                             }
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
@@ -98,7 +98,7 @@ import {ButtonModule} from '@openng/optimus-ui/button';
                     <ng-template #content let-event>
                         {{ event }}
                     </ng-template>
-                    <ng-template #opposite let-event> &nbsp; </ng-template>
+                    <ng-template #opposite let-event />
                 </p-timeline>
             </div>
         </div>

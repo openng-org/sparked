@@ -35,7 +35,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                                     <div class="md:w-40 relative">
                                         <img class="block xl:block mx-auto rounded w-full" src="https://primefaces.org/cdn/primevue/images/product/{{ item.image }}" [alt]="item.name" />
                                         <div class="absolute bg-black/70 rounded-border" [style]="{ left: '4px', top: '4px' }">
-                                            <p-tag [value]="item.inventoryStatus" [severity]="getSeverity(item)"></p-tag>
+                                            <p-tag [value]="item.inventoryStatus" [severity]="getSeverity(item)" />
                                         </div>
                                     </div>
                                     <div class="flex flex-col md:flex-row justify-between md:items-center flex-1 gap-6">
@@ -62,8 +62,8 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                                         <div class="flex flex-col md:items-end gap-8">
                                             <span class="text-xl font-semibold">$ {{ item.price }}</span>
                                             <div class="flex flex-row-reverse md:flex-row gap-2">
-                                                <p-button icon="pi pi-heart" styleClass="h-full" [outlined]="true"></p-button>
-                                                <p-button icon="pi pi-shopping-cart" label="Buy Now" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" styleClass="flex-auto md:flex-initial whitespace-nowrap"></p-button>
+                                                <p-button icon="pi pi-heart" styleClass="h-full" [outlined]="true" />
+                                                <p-button icon="pi pi-shopping-cart" label="Buy Now" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" styleClass="flex-auto md:flex-initial whitespace-nowrap" />
                                             </div>
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                                                 top: '4px'
                                             }"
                                         >
-                                            <p-tag [value]="item.inventoryStatus" [severity]="getSeverity(item)"></p-tag>
+                                            <p-tag [value]="item.inventoryStatus" [severity]="getSeverity(item)" />
                                         </div>
                                     </div>
                                     <div class="pt-12">
@@ -116,8 +116,8 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                                         <div class="flex flex-col gap-6 mt-6">
                                             <span class="text-2xl font-semibold">$ {{ item.price }}</span>
                                             <div class="flex gap-2">
-                                                <p-button icon="pi pi-shopping-cart" label="Buy Now" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" class="flex-auto whitespace-nowrap" styleClass="w-full"></p-button>
-                                                <p-button icon="pi pi-heart" styleClass="h-full" [outlined]="true"></p-button>
+                                                <p-button icon="pi pi-shopping-cart" label="Buy Now" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'" class="flex-auto whitespace-nowrap" styleClass="w-full" />
+                                                <p-button icon="pi pi-heart" styleClass="h-full" [outlined]="true" />
                                             </div>
                                         </div>
                                     </div>

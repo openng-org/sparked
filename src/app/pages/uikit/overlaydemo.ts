@@ -121,8 +121,8 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
 
             <div class="card">
                 <div class="font-semibold text-xl mb-4">ConfirmPopup</div>
-                <p-confirmpopup key="confirm2"></p-confirmpopup>
-                <p-button #popup (click)="confirm($event)" icon="pi pi-check" label="Confirm" class="mr-2"></p-button>
+                <p-confirmpopup key="confirm2" />
+                <p-button #popup (click)="confirm($event)" icon="pi pi-check" label="Confirm" class="mr-2" />
             </div>
 
             <div class="card">

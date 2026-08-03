@@ -75,13 +75,13 @@ interface expandedRows {
                         <th style="min-width: 12rem">
                             <div class="flex justify-between items-center">
                                 Name
-                                <p-columnFilter type="text" field="name" display="menu" placeholder="Search by name"></p-columnFilter>
+                                <p-columnFilter type="text" field="name" display="menu" placeholder="Search by name" />
                             </div>
                         </th>
                         <th style="min-width: 12rem">
                             <div class="flex justify-between items-center">
                                 Country
-                                <p-columnFilter type="text" field="country.name" display="menu" placeholder="Search by country"></p-columnFilter>
+                                <p-columnFilter type="text" field="country.name" display="menu" placeholder="Search by country" />
                             </div>
                         </th>
                         <th style="min-width: 14rem">
@@ -109,13 +109,13 @@ interface expandedRows {
                         <th style="min-width: 10rem">
                             <div class="flex justify-between items-center">
                                 Date
-                                <p-columnFilter type="date" field="date" display="menu" placeholder="mm/dd/yyyy"></p-columnFilter>
+                                <p-columnFilter type="date" field="date" display="menu" placeholder="mm/dd/yyyy" />
                             </div>
                         </th>
                         <th style="min-width: 10rem">
                             <div class="flex justify-between items-center">
                                 Balance
-                                <p-columnFilter type="numeric" field="balance" display="menu" currency="USD"></p-columnFilter>
+                                <p-columnFilter type="numeric" field="balance" display="menu" currency="USD" />
                             </div>
                         </th>
                         <th style="min-width: 12rem">
@@ -137,7 +137,7 @@ interface expandedRows {
                                 Activity
                                 <p-columnFilter field="activity" matchMode="between" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
                                     <ng-template #filter let-filter="filterCallback">
-                                        <p-slider [ngModel]="activityValues" [range]="true" (onSlideEnd)="filter($event.values)" styleClass="m-3" [style]="{ 'min-width': '12rem' }"></p-slider>
+                                        <p-slider [ngModel]="activityValues" [range]="true" (onSlideEnd)="filter($event.values)" styleClass="m-3" [style]="{ 'min-width': '12rem' }" />
                                         <div class="flex items-center justify-between px-2">
                                             <span>{{ activityValues[0] }}</span>
                                             <span>{{ activityValues[1] }}</span>
@@ -149,7 +149,7 @@ interface expandedRows {
                         <th style="min-width: 8rem">
                             <div class="flex justify-between items-center">
                                 Verified
-                                <p-columnFilter type="boolean" field="verified" display="menu"></p-columnFilter>
+                                <p-columnFilter type="boolean" field="verified" display="menu" />
                             </div>
                         </th>
                     </tr>

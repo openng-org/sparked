@@ -58,7 +58,7 @@ import { ToolbarModule } from '@openng/optimus-ui/toolbar';
                         </p-iconfield>
                     </ng-template>
 
-                    <ng-template #end><p-splitbutton label="Save" [model]="items"></p-splitbutton></ng-template>
+                    <ng-template #end><p-splitbutton label="Save" [model]="items" /></ng-template>
                 </p-toolbar>
             </div>
 
@@ -172,7 +172,7 @@ import { ToolbarModule } from '@openng/optimus-ui/toolbar';
                             <input pInputText id="password" type="password" />
                         </div>
                         <div class="flex">
-                            <p-button label="Login" icon="pi pi-user" class="w-full max-w-[17.35rem] mx-auto"></p-button>
+                            <p-button label="Login" icon="pi pi-user" class="w-full max-w-[17.35rem] mx-auto" />
                         </div>
                     </div>
                     <div class="w-full md:w-2/12">
@@ -180,7 +180,7 @@ import { ToolbarModule } from '@openng/optimus-ui/toolbar';
                         <p-divider layout="horizontal" class="flex! md:hidden!" align="center"><b>OR</b></p-divider>
                     </div>
                     <div class="w-full md:w-5/12 flex items-center justify-center py-5">
-                        <p-button label="Sign Up" icon="pi pi-user-plus" severity="success" class="w-full" styleClass="w-full max-w-[17.35rem] mx-auto"></p-button>
+                        <p-button label="Sign Up" icon="pi pi-user-plus" severity="success" class="w-full" styleClass="w-full max-w-[17.35rem] mx-auto" />
                     </div>
                 </div>
             </div>

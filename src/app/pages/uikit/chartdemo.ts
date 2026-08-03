@@ -1,7 +1,7 @@
-import {Component, effect, inject, signal} from '@angular/core';
-import {ChartModule} from '@openng/optimus-ui/chart';
-import {FluidModule} from '@openng/optimus-ui/fluid';
-import {LayoutService} from '@/app/layout/service/layout.service';
+import { Component, effect, inject, signal } from '@angular/core';
+import { ChartModule } from '@openng/optimus-ui/chart';
+import { FluidModule } from '@openng/optimus-ui/fluid';
+import { LayoutService } from '@/app/layout/service/layout.service';
 
 @Component({
     selector: 'app-chart-demo',
@@ -12,37 +12,37 @@ import {LayoutService} from '@/app/layout/service/layout.service';
             <div class="col-span-12 xl:col-span-6">
                 <div class="card">
                     <div class="font-semibold text-xl mb-6">Linear</div>
-                    <p-chart type="line" [data]="lineData()" [options]="lineOptions()"></p-chart>
+                    <p-chart type="line" [data]="lineData()" [options]="lineOptions()" />
                 </div>
             </div>
             <div class="col-span-12 xl:col-span-6">
                 <div class="card">
                     <div class="font-semibold text-xl mb-6">Bar</div>
-                    <p-chart type="bar" [data]="barData()" [options]="barOptions()"></p-chart>
+                    <p-chart type="bar" [data]="barData()" [options]="barOptions()" />
                 </div>
             </div>
             <div class="col-span-12 xl:col-span-6">
                 <div class="card flex flex-col items-center">
                     <div class="font-semibold text-xl mb-6">Pie</div>
-                    <p-chart type="pie" [data]="pieData()" [options]="pieOptions()"></p-chart>
+                    <p-chart type="pie" [data]="pieData()" [options]="pieOptions()" />
                 </div>
             </div>
             <div class="col-span-12 xl:col-span-6">
                 <div class="card flex flex-col items-center">
                     <div class="font-semibold text-xl mb-6">Doughnut</div>
-                    <p-chart type="doughnut" [data]="pieData()" [options]="pieOptions()"></p-chart>
+                    <p-chart type="doughnut" [data]="pieData()" [options]="pieOptions()" />
                 </div>
             </div>
             <div class="col-span-12 xl:col-span-6">
                 <div class="card flex flex-col items-center">
                     <div class="font-semibold text-xl mb-6">Polar Area</div>
-                    <p-chart type="polarArea" [data]="polarData()" [options]="polarOptions()"></p-chart>
+                    <p-chart type="polarArea" [data]="polarData()" [options]="polarOptions()" />
                 </div>
             </div>
             <div class="col-span-12 xl:col-span-6">
                 <div class="card flex flex-col items-center">
                     <div class="font-semibold text-xl mb-6">Radar</div>
-                    <p-chart type="radar" [data]="radarData()" [options]="radarOptions()"></p-chart>
+                    <p-chart type="radar" [data]="radarData()" [options]="radarOptions()" />
                 </div>
             </div>
         </p-fluid>
@@ -52,29 +52,29 @@ export class ChartDemo {
     layoutService = inject(LayoutService);
 
     lineData = signal<any>(null);
-    
+
     barData = signal<any>(null);
-    
+
     pieData = signal<any>(null);
-    
+
     polarData = signal<any>(null);
-    
+
     radarData = signal<any>(null);
 
     lineOptions = signal<any>(null);
-    
+
     barOptions = signal<any>(null);
-    
+
     pieOptions = signal<any>(null);
-    
+
     polarOptions = signal<any>(null);
-    
+
     radarOptions = signal<any>(null);
 
     chartEffect = effect(() => {
         this.layoutService.layoutConfig().darkTheme;
         setTimeout(() => this.initCharts(), 150);
-    })
+    });
 
     initCharts() {
         const documentStyle = getComputedStyle(document.documentElement);
