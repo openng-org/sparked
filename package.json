@@ -1,6 +1,7 @@
 {
     "name": "sakai-ng",
     "version": "21.0.0",
+    "packageManager": "pnpm@10.28.0",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -50,5 +51,13 @@
         "prettier": "^3.0.0",
         "tailwindcss": "^4.1.11",
         "typescript": "~5.9.3"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "@parcel/watcher",
+            "esbuild",
+            "lmdb",
+            "msgpackr-extract"
+        ]
     }
 }
