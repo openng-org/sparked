@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { CarouselModule } from '@openng/optimus-ui/carousel';
@@ -11,7 +10,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
 @Component({
     selector: 'app-media-demo',
     standalone: true,
-    imports: [CommonModule, CarouselModule, ButtonModule, GalleriaModule, ImageModule, TagModule],
+    imports: [CarouselModule, ButtonModule, GalleriaModule, ImageModule, TagModule],
     template: `<div class="card">
             <div class="font-semibold text-xl mb-4">Carousel</div>
             <p-carousel [value]="products()" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="carouselResponsiveOptions">
@@ -20,7 +19,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                         <div class="mb-4">
                             <div class="relative mx-auto">
                                 <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
-                                <div class="absolute bg-black/70 rounded-border" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }">
+                                <div class="absolute bg-black/70 rounded-border" [style]="{ 'left.px': 5, 'top.px': 5 }">
                                     <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)" />
                                 </div>
                             </div>
