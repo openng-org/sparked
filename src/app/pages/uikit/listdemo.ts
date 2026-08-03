@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { DataViewModule } from '@openng/optimus-ui/dataview';
@@ -163,6 +163,8 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
     providers: [ProductService]
 })
 export class ListDemo {
+    private productService = inject(ProductService);
+
     layout: 'list' | 'grid' = 'list';
 
     options = ['list', 'grid'];
@@ -174,8 +176,6 @@ export class ListDemo {
     targetCities: any[] = [];
 
     orderCities: any[] = [];
-
-    constructor(private productService: ProductService) {}
 
     ngOnInit() {
         this.productService.getProductsSmall().then((data) => (this.products = data.slice(0, 6)));

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MessageService } from '@openng/optimus-ui/api';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { FileUploadModule } from '@openng/optimus-ui/fileupload';
@@ -34,9 +34,9 @@ import { ToastModule } from '@openng/optimus-ui/toast';
     providers: [MessageService]
 })
 export class FileDemo {
-    uploadedFiles: any[] = [];
+    private messageService = inject(MessageService);
 
-    constructor(private messageService: MessageService) {}
+    uploadedFiles: any[] = [];
 
     onUpload(event: any) {
         for (const file of event.files) {

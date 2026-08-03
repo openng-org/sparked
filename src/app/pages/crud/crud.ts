@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, ViewChild } from '@angular/core';
+import { Component, OnInit, signal, ViewChild, inject } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { Table, TableModule } from '@openng/optimus-ui/table';
 import { CommonModule } from '@angular/common';
@@ -149,13 +149,13 @@ interface ExportColumn {
         <p-dialog [(visible)]="productDialog" [style]="{ width: '450px' }" header="Product Details" [modal]="true">
             <ng-template #content>
                 <div class="flex flex-col gap-6">
-                    @if(product.image) {
+                    @if (product.image) {
                         <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.image" class="block m-auto pb-4" />
                     }
                     <div>
                         <label for="name" class="block font-bold mb-3">Name</label>
                         <input type="text" pInputText id="name" [(ngModel)]="product.name" required autofocus fluid />
-                        @if(submitted && !product.name) {
+                        @if (submitted && !product.name) {
                             <small class="text-red-500">Name is required.</small>
                         }
                     </div>
@@ -215,6 +215,10 @@ interface ExportColumn {
     providers: [MessageService, ProductService, ConfirmationService]
 })
 export class Crud implements OnInit {
+    private productService = inject(ProductService);
+    private messageService = inject(MessageService);
+    private confirmationService = inject(ConfirmationService);
+
     productDialog: boolean = false;
 
     products = signal<Product[]>([]);
@@ -232,12 +236,6 @@ export class Crud implements OnInit {
     exportColumns!: ExportColumn[];
 
     cols!: Column[];
-
-    constructor(
-        private productService: ProductService,
-        private messageService: MessageService,
-        private confirmationService: ConfirmationService
-    ) {}
 
     exportCSV() {
         this.dt.exportCSV();

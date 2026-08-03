@@ -1,16 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {ConfirmationService, MessageService} from '@openng/optimus-ui/api';
-import {ButtonModule} from '@openng/optimus-ui/button';
-import {DialogModule} from '@openng/optimus-ui/dialog';
-import {ToastModule} from '@openng/optimus-ui/toast';
-import {DrawerModule} from '@openng/optimus-ui/drawer';
-import {Popover, PopoverModule} from '@openng/optimus-ui/popover';
-import {ConfirmPopupModule} from '@openng/optimus-ui/confirmpopup';
-import {InputTextModule} from '@openng/optimus-ui/inputtext';
-import {FormsModule} from '@angular/forms';
-import {TooltipModule} from '@openng/optimus-ui/tooltip';
-import {TableModule} from '@openng/optimus-ui/table';
-import {Product, ProductService} from '@/app/pages/service/product.service';
+import { Component, OnInit, inject } from '@angular/core';
+import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { DialogModule } from '@openng/optimus-ui/dialog';
+import { ToastModule } from '@openng/optimus-ui/toast';
+import { DrawerModule } from '@openng/optimus-ui/drawer';
+import { Popover, PopoverModule } from '@openng/optimus-ui/popover';
+import { ConfirmPopupModule } from '@openng/optimus-ui/confirmpopup';
+import { InputTextModule } from '@openng/optimus-ui/inputtext';
+import { FormsModule } from '@angular/forms';
+import { TooltipModule } from '@openng/optimus-ui/tooltip';
+import { TableModule } from '@openng/optimus-ui/table';
+import { Product, ProductService } from '@/app/pages/service/product.service';
 
 @Component({
     selector: 'app-overlay-demo',
@@ -144,6 +144,10 @@ import {Product, ProductService} from '@/app/pages/service/product.service';
     providers: [ConfirmationService, MessageService, ProductService]
 })
 export class OverlayDemo implements OnInit {
+    private productService = inject(ProductService);
+    private confirmationService = inject(ConfirmationService);
+    private messageService = inject(MessageService);
+
     display: boolean = false;
 
     products: Product[] = [];
@@ -161,12 +165,6 @@ export class OverlayDemo implements OnInit {
     displayConfirmation: boolean = false;
 
     selectedProduct!: Product;
-
-    constructor(
-        private productService: ProductService,
-        private confirmationService: ConfirmationService,
-        private messageService: MessageService
-    ) {}
 
     ngOnInit() {
         this.productService.getProductsSmall().then((products) => (this.products = products));

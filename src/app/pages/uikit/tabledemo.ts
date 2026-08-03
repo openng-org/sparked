@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { MultiSelectModule } from '@openng/optimus-ui/multiselect';
@@ -18,7 +18,7 @@ import { IconFieldModule } from '@openng/optimus-ui/iconfield';
 import { TagModule } from '@openng/optimus-ui/tag';
 import { Customer, CustomerService, Representative } from '@/app/pages/service/customer.service';
 import { Product, ProductService } from '@/app/pages/service/product.service';
-import {ObjectUtils} from "@openng/optimus-ui/utils";
+import { ObjectUtils } from '@openng/optimus-ui/utils';
 
 interface expandedRows {
     [key: string]: boolean;
@@ -391,6 +391,9 @@ interface expandedRows {
     providers: [ConfirmationService, MessageService, CustomerService, ProductService]
 })
 export class TableDemo implements OnInit {
+    private customerService = inject(CustomerService);
+    private productService = inject(ProductService);
+
     customers1: Customer[] = [];
 
     customers2: Customer[] = [];
@@ -420,11 +423,6 @@ export class TableDemo implements OnInit {
     loading: boolean = true;
 
     @ViewChild('filter') filter!: ElementRef;
-
-    constructor(
-        private customerService: CustomerService,
-        private productService: ProductService
-    ) {}
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then((customers) => {
@@ -489,7 +487,7 @@ export class TableDemo implements OnInit {
     }
 
     expandAll() {
-        if(ObjectUtils.isEmpty(this.expandedRows)) {
+        if (ObjectUtils.isEmpty(this.expandedRows)) {
             this.expandedRows = this.products.reduce(
                 (acc, p) => {
                     if (p.id) {
@@ -501,9 +499,8 @@ export class TableDemo implements OnInit {
             );
             this.isExpanded = true;
         } else {
-            this.collapseAll()
+            this.collapseAll();
         }
-
     }
 
     collapseAll() {

@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { StyleClassModule } from '@openng/optimus-ui/styleclass';
 import { Router, RouterModule } from '@angular/router';
 import { RippleModule } from '@openng/optimus-ui/ripple';
 import { ButtonModule } from '@openng/optimus-ui/button';
-import {AppFloatingConfigurator} from "@/app/layout/component/app.floatingconfigurator";
+import { AppFloatingConfigurator } from '@/app/layout/component/app.floatingconfigurator';
 
 @Component({
     selector: 'topbar-widget',
@@ -59,10 +59,10 @@ import {AppFloatingConfigurator} from "@/app/layout/component/app.floatingconfig
             <div class="flex border-t lg:border-t-0 border-surface py-4 lg:py-0 mt-4 lg:mt-0 gap-2">
                 <button pButton pRipple label="Login" routerLink="/auth/login" [rounded]="true" [text]="true"></button>
                 <button pButton pRipple label="Register" routerLink="/auth/login" [rounded]="true"></button>
-                <app-floating-configurator [float]="false"/>
+                <app-floating-configurator [float]="false" />
             </div>
         </div> `
 })
 export class TopbarWidget {
-    constructor(public router: Router) {}
+    router = inject(Router);
 }
