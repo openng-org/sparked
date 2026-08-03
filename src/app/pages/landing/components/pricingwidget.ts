@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { DividerModule } from 'primeng/divider';
-import { RippleModule } from 'primeng/ripple';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { DividerModule } from '@openng/optimus-ui/divider';
+import { RippleModule } from '@openng/optimus-ui/ripple';
 
 @Component({
     selector: 'pricing-widget',

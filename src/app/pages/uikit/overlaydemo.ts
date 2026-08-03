@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {ConfirmationService, MessageService} from 'primeng/api';
-import {ButtonModule} from 'primeng/button';
-import {DialogModule} from 'primeng/dialog';
-import {ToastModule} from 'primeng/toast';
-import {DrawerModule} from 'primeng/drawer';
-import {Popover, PopoverModule} from 'primeng/popover';
-import {ConfirmPopupModule} from 'primeng/confirmpopup';
-import {InputTextModule} from 'primeng/inputtext';
+import {ConfirmationService, MessageService} from '@openng/optimus-ui/api';
+import {ButtonModule} from '@openng/optimus-ui/button';
+import {DialogModule} from '@openng/optimus-ui/dialog';
+import {ToastModule} from '@openng/optimus-ui/toast';
+import {DrawerModule} from '@openng/optimus-ui/drawer';
+import {Popover, PopoverModule} from '@openng/optimus-ui/popover';
+import {ConfirmPopupModule} from '@openng/optimus-ui/confirmpopup';
+import {InputTextModule} from '@openng/optimus-ui/inputtext';
 import {FormsModule} from '@angular/forms';
-import {TooltipModule} from 'primeng/tooltip';
-import {TableModule} from 'primeng/table';
+import {TooltipModule} from '@openng/optimus-ui/tooltip';
+import {TableModule} from '@openng/optimus-ui/table';
 import {Product, ProductService} from '@/app/pages/service/product.service';
 
 @Component({

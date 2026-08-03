@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { AvatarModule } from 'primeng/avatar';
-import { AvatarGroupModule } from 'primeng/avatargroup';
-import { BadgeModule } from 'primeng/badge';
-import { ButtonModule } from 'primeng/button';
-import { ChipModule } from 'primeng/chip';
-import { OverlayBadgeModule } from 'primeng/overlaybadge';
-import { ProgressBarModule } from 'primeng/progressbar';
-import { ScrollPanelModule } from 'primeng/scrollpanel';
-import { ScrollTopModule } from 'primeng/scrolltop';
-import { SkeletonModule } from 'primeng/skeleton';
-import { TagModule } from 'primeng/tag';
+import { AvatarModule } from '@openng/optimus-ui/avatar';
+import { AvatarGroupModule } from '@openng/optimus-ui/avatargroup';
+import { BadgeModule } from '@openng/optimus-ui/badge';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { ChipModule } from '@openng/optimus-ui/chip';
+import { OverlayBadgeModule } from '@openng/optimus-ui/overlaybadge';
+import { ProgressBarModule } from '@openng/optimus-ui/progressbar';
+import { ScrollPanelModule } from '@openng/optimus-ui/scrollpanel';
+import { ScrollTopModule } from '@openng/optimus-ui/scrolltop';
+import { SkeletonModule } from '@openng/optimus-ui/skeleton';
+import { TagModule } from '@openng/optimus-ui/tag';
 
 @Component({
     selector: 'app-misc-demo',

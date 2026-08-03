@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {TimelineModule} from 'primeng/timeline';
-import {CardModule} from 'primeng/card';
+import {TimelineModule} from '@openng/optimus-ui/timeline';
+import {CardModule} from '@openng/optimus-ui/card';
 import {CommonModule} from '@angular/common';
-import {ButtonModule} from 'primeng/button';
+import {ButtonModule} from '@openng/optimus-ui/button';
 
 @Component({
     selector: 'app-timeline-demo',

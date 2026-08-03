@@ -1,5 +1,5 @@
 import { afterNextRender, Component, effect, inject, signal } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
+import { ChartModule } from '@openng/optimus-ui/chart';
 import { LayoutService } from '@/app/layout/service/layout.service';
 
 @Component({

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { RippleModule } from 'primeng/ripple';
-import { StyleClassModule } from 'primeng/styleclass';
-import { ButtonModule } from 'primeng/button';
-import { DividerModule } from 'primeng/divider';
+import { RippleModule } from '@openng/optimus-ui/ripple';
+import { StyleClassModule } from '@openng/optimus-ui/styleclass';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { DividerModule } from '@openng/optimus-ui/divider';
 import { TopbarWidget } from './components/topbarwidget.component';
 import { HeroWidget } from './components/herowidget';
 import { FeaturesWidget } from './components/featureswidget';

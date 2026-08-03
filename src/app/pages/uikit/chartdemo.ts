@@ -1,6 +1,6 @@
 import {Component, effect, inject, signal} from '@angular/core';
-import {ChartModule} from 'primeng/chart';
-import {FluidModule} from 'primeng/fluid';
+import {ChartModule} from '@openng/optimus-ui/chart';
+import {FluidModule} from '@openng/optimus-ui/fluid';
 import {LayoutService} from '@/app/layout/service/layout.service';
 
 @Component({

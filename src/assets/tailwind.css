@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@plugin 'tailwindcss-primeui';
+@plugin '@openng/optimus-ui-tailwindcss';
 
 @custom-variant dark (&:where([class*="app-dark"], [class*="app-dark"] *));
 

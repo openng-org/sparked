@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { RippleModule } from 'primeng/ripple';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { RippleModule } from '@openng/optimus-ui/ripple';
 
 @Component({
     selector: 'hero-widget',

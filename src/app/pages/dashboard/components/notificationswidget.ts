@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { MenuModule } from 'primeng/menu';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { MenuModule } from '@openng/optimus-ui/menu';
 
 @Component({
     standalone: true,

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
-import { ButtonModule } from 'primeng/button';
-import { ButtonGroupModule } from 'primeng/buttongroup';
-import { SplitButtonModule } from 'primeng/splitbutton';
+import { MenuItem } from '@openng/optimus-ui/api';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { ButtonGroupModule } from '@openng/optimus-ui/buttongroup';
+import { SplitButtonModule } from '@openng/optimus-ui/splitbutton';
 
 @Component({
     selector: 'app-button-demo',

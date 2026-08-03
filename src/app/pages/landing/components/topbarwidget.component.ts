@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { StyleClassModule } from 'primeng/styleclass';
+import { StyleClassModule } from '@openng/optimus-ui/styleclass';
 import { Router, RouterModule } from '@angular/router';
-import { RippleModule } from 'primeng/ripple';
-import { ButtonModule } from 'primeng/button';
+import { RippleModule } from '@openng/optimus-ui/ripple';
+import { ButtonModule } from '@openng/optimus-ui/button';
 import {AppFloatingConfigurator} from "@/app/layout/component/app.floatingconfigurator";
 
 @Component({

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { FluidModule } from 'primeng/fluid';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { SelectModule } from 'primeng/select';
+import { FluidModule } from '@openng/optimus-ui/fluid';
+import { InputTextModule } from '@openng/optimus-ui/inputtext';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { SelectModule } from '@openng/optimus-ui/select';
 import { FormsModule } from '@angular/forms';
-import { TextareaModule } from 'primeng/textarea';
+import { TextareaModule } from '@openng/optimus-ui/textarea';
 
 @Component({
     selector: 'app-formlayout-demo',
