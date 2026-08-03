@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MessageService } from 'primeng/api';
-import { ButtonModule } from 'primeng/button';
-import { FileUploadModule } from 'primeng/fileupload';
-import { ToastModule } from 'primeng/toast';
+import { MessageService } from '@openng/optimus-ui/api';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { FileUploadModule } from '@openng/optimus-ui/fileupload';
+import { ToastModule } from '@openng/optimus-ui/toast';
 
 @Component({
     selector: 'app-file-demo',

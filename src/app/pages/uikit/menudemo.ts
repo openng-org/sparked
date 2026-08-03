@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
-import { TieredMenuModule } from 'primeng/tieredmenu';
-import { ContextMenuModule } from 'primeng/contextmenu';
+import { BreadcrumbModule } from '@openng/optimus-ui/breadcrumb';
+import { TieredMenuModule } from '@openng/optimus-ui/tieredmenu';
+import { ContextMenuModule } from '@openng/optimus-ui/contextmenu';
 import { CommonModule } from '@angular/common';
-import { MenuModule } from 'primeng/menu';
-import { ButtonModule } from 'primeng/button';
-import { MegaMenuModule } from 'primeng/megamenu';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { TabsModule } from 'primeng/tabs';
-import { MenubarModule } from 'primeng/menubar';
-import { InputTextModule } from 'primeng/inputtext';
-import { StepperModule } from 'primeng/stepper';
-import { IconField, IconFieldModule } from 'primeng/iconfield';
-import { InputIcon, InputIconModule } from 'primeng/inputicon';
+import { MenuModule } from '@openng/optimus-ui/menu';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { MegaMenuModule } from '@openng/optimus-ui/megamenu';
+import { PanelMenuModule } from '@openng/optimus-ui/panelmenu';
+import { TabsModule } from '@openng/optimus-ui/tabs';
+import { MenubarModule } from '@openng/optimus-ui/menubar';
+import { InputTextModule } from '@openng/optimus-ui/inputtext';
+import { StepperModule } from '@openng/optimus-ui/stepper';
+import { IconField, IconFieldModule } from '@openng/optimus-ui/iconfield';
+import { InputIcon, InputIconModule } from '@openng/optimus-ui/inputicon';
 
 @Component({
     selector: 'app-menu-demo',

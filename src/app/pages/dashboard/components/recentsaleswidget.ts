@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
-import { RippleModule } from 'primeng/ripple';
-import { TableModule } from 'primeng/table';
-import { ButtonModule } from 'primeng/button';
+import { RippleModule } from '@openng/optimus-ui/ripple';
+import { TableModule } from '@openng/optimus-ui/table';
+import { ButtonModule } from '@openng/optimus-ui/button';
 import { CommonModule } from '@angular/common';
 import { Product, ProductService } from '@/app/pages/service/product.service';
 

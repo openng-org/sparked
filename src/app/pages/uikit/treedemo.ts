@@ -1,8 +1,8 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { TreeNode } from 'primeng/api';
-import { TreeModule } from 'primeng/tree';
+import { TreeNode } from '@openng/optimus-ui/api';
+import { TreeModule } from '@openng/optimus-ui/tree';
 import { FormsModule } from '@angular/forms';
-import { TreeTableModule } from 'primeng/treetable';
+import { TreeTableModule } from '@openng/optimus-ui/treetable';
 import { CommonModule } from '@angular/common';
 import { NodeService } from '@/app/pages/service/node.service';
 

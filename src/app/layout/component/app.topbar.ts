@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem } from '@openng/optimus-ui/api';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { StyleClassModule } from 'primeng/styleclass';
+import { StyleClassModule } from '@openng/optimus-ui/styleclass';
 import { AppConfigurator } from './app.configurator';
 import { LayoutService } from '@/app/layout/service/layout.service';
 

@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { CarouselModule } from 'primeng/carousel';
-import { GalleriaModule } from 'primeng/galleria';
-import { ImageModule } from 'primeng/image';
-import { TagModule } from 'primeng/tag';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { CarouselModule } from '@openng/optimus-ui/carousel';
+import { GalleriaModule } from '@openng/optimus-ui/galleria';
+import { ImageModule } from '@openng/optimus-ui/image';
+import { TagModule } from '@openng/optimus-ui/tag';
 import { PhotoService } from '@/app/pages/service/photo.service';
 import { Product, ProductService } from '@/app/pages/service/product.service';
 

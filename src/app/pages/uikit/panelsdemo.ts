@@ -1,21 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AccordionModule } from 'primeng/accordion';
-import { MenuItem } from 'primeng/api';
-import { ButtonModule } from 'primeng/button';
-import { DividerModule } from 'primeng/divider';
-import { FieldsetModule } from 'primeng/fieldset';
-import { IconFieldModule } from 'primeng/iconfield';
-import { InputIconModule } from 'primeng/inputicon';
-import { InputTextModule } from 'primeng/inputtext';
-import { MenuModule } from 'primeng/menu';
-import { PanelModule } from 'primeng/panel';
-import { RippleModule } from 'primeng/ripple';
-import { SplitButtonModule } from 'primeng/splitbutton';
-import { SplitterModule } from 'primeng/splitter';
-import { TabsModule } from 'primeng/tabs';
-import { ToolbarModule } from 'primeng/toolbar';
+import { AccordionModule } from '@openng/optimus-ui/accordion';
+import { MenuItem } from '@openng/optimus-ui/api';
+import { ButtonModule } from '@openng/optimus-ui/button';
+import { DividerModule } from '@openng/optimus-ui/divider';
+import { FieldsetModule } from '@openng/optimus-ui/fieldset';
+import { IconFieldModule } from '@openng/optimus-ui/iconfield';
+import { InputIconModule } from '@openng/optimus-ui/inputicon';
+import { InputTextModule } from '@openng/optimus-ui/inputtext';
+import { MenuModule } from '@openng/optimus-ui/menu';
+import { PanelModule } from '@openng/optimus-ui/panel';
+import { RippleModule } from '@openng/optimus-ui/ripple';
+import { SplitButtonModule } from '@openng/optimus-ui/splitbutton';
+import { SplitterModule } from '@openng/optimus-ui/splitter';
+import { TabsModule } from '@openng/optimus-ui/tabs';
+import { ToolbarModule } from '@openng/optimus-ui/toolbar';
 
 @Component({
     selector: 'app-panels-demo',

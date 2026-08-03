@@ -2,12 +2,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, computed, inject, PLATFORM_ID, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { $t, updatePreset, updateSurfacePalette } from '@primeuix/themes';
-import Aura from '@primeuix/themes/aura';
-import Lara from '@primeuix/themes/lara';
-import Nora from '@primeuix/themes/nora';
-import { PrimeNG } from 'primeng/config';
-import { SelectButtonModule } from 'primeng/selectbutton';
+import { $t, updatePreset, updateSurfacePalette } from '@openng/optimus-ui-themes';
+import Aura from '@openng/optimus-ui-themes/aura';
+import Lara from '@openng/optimus-ui-themes/lara';
+import Nora from '@openng/optimus-ui-themes/nora';
+import { Optimus } from '@openng/optimus-ui/config';
+import { SelectButtonModule } from '@openng/optimus-ui/selectbutton';
 import { LayoutService } from '@/app/layout/service/layout.service';
 
 const presets = {
@@ -98,13 +98,13 @@ declare type SurfacesType = {
 export class AppConfigurator {
     router = inject(Router);
 
-    config: PrimeNG = inject(PrimeNG);
+    config: Optimus = inject(Optimus);
 
     layoutService: LayoutService = inject(LayoutService);
 
     platformId = inject(PLATFORM_ID);
 
-    primeng = inject(PrimeNG);
+    primeng = inject(Optimus);
 
     presets = Object.keys(presets);
 

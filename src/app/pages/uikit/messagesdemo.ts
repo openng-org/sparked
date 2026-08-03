@@ -1,11 +1,11 @@
 import {CommonModule} from '@angular/common';
 import {Component} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {MessageService, ToastMessageOptions} from 'primeng/api';
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
-import {MessageModule} from 'primeng/message';
-import {ToastModule} from 'primeng/toast';
+import {MessageService, ToastMessageOptions} from '@openng/optimus-ui/api';
+import {ButtonModule} from '@openng/optimus-ui/button';
+import {InputTextModule} from '@openng/optimus-ui/inputtext';
+import {MessageModule} from '@openng/optimus-ui/message';
+import {ToastModule} from '@openng/optimus-ui/toast';
 
 @Component({
     selector: 'app-messages-demo',
