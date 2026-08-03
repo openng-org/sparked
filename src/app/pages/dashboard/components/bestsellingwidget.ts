@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { MenuModule } from '@openng/optimus-ui/menu';
 
 @Component({
     standalone: true,
     selector: 'app-best-selling-widget',
-    imports: [CommonModule, ButtonModule, MenuModule],
+    imports: [ButtonModule, MenuModule],
     template: ` <div class="card">
         <div class="flex justify-between items-center mb-6">
             <div class="font-semibold text-xl">Best Selling Products</div>

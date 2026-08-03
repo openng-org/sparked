@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { TimelineModule } from '@openng/optimus-ui/timeline';
 import { CardModule } from '@openng/optimus-ui/card';
-import { CommonModule } from '@angular/common';
+
 import { ButtonModule } from '@openng/optimus-ui/button';
 
 @Component({
     selector: 'app-timeline-demo',
     standalone: true,
-    imports: [CommonModule, TimelineModule, ButtonModule, CardModule],
+    imports: [TimelineModule, ButtonModule, CardModule],
     template: `<div class="grid grid-cols-12 gap-8">
         <div class="col-span-12 sm:col-span-6">
             <div class="card">

@@ -1,13 +1,13 @@
 import { Component, computed, inject, input, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { RippleModule } from '@openng/optimus-ui/ripple';
 import { LayoutService } from '@/app/layout/service/layout.service';
 import { filter } from 'rxjs/operators';
 
 @Component({
     selector: '[app-menuitem]',
-    imports: [CommonModule, RouterModule, RippleModule],
+    imports: [RouterModule, RippleModule, NgClass],
     template: `
         @if (root() && isVisible()) {
             <div class="layout-menuitem-root-text">{{ item().label }}</div>

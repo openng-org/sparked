@@ -2,13 +2,13 @@ import { Component, inject, signal } from '@angular/core';
 import { RippleModule } from '@openng/optimus-ui/ripple';
 import { TableModule } from '@openng/optimus-ui/table';
 import { ButtonModule } from '@openng/optimus-ui/button';
-import { CommonModule } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 import { Product, ProductService } from '@/app/pages/service/product.service';
 
 @Component({
     standalone: true,
     selector: 'app-recent-sales-widget',
-    imports: [CommonModule, TableModule, ButtonModule, RippleModule],
+    imports: [TableModule, ButtonModule, RippleModule, CurrencyPipe],
     template: `<div class="card mb-8!">
         <div class="font-semibold text-xl mb-4">Recent Sales</div>
         <p-table [value]="products()" [paginator]="true" [rows]="5" responsiveLayout="scroll">

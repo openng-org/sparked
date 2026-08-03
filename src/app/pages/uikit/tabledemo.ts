@@ -8,7 +8,7 @@ import { Table, TableModule } from '@openng/optimus-ui/table';
 import { ProgressBarModule } from '@openng/optimus-ui/progressbar';
 import { ToggleButtonModule } from '@openng/optimus-ui/togglebutton';
 import { ToastModule } from '@openng/optimus-ui/toast';
-import { CommonModule } from '@angular/common';
+import { DatePipe, CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { RatingModule } from '@openng/optimus-ui/rating';
@@ -38,12 +38,13 @@ interface expandedRows {
         ProgressBarModule,
         ToggleButtonModule,
         ToastModule,
-        CommonModule,
         FormsModule,
         ButtonModule,
         RatingModule,
         RippleModule,
-        IconFieldModule
+        IconFieldModule,
+        CurrencyPipe,
+        DatePipe
     ],
     template: ` <div class="card">
             <div class="font-semibold text-xl mb-4">Filtering</div>

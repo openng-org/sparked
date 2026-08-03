@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MessageService, ToastMessageOptions } from '@openng/optimus-ui/api';
@@ -10,7 +9,7 @@ import { ToastModule } from '@openng/optimus-ui/toast';
 @Component({
     selector: 'app-messages-demo',
     standalone: true,
-    imports: [CommonModule, ToastModule, ButtonModule, InputTextModule, MessageModule, FormsModule],
+    imports: [ToastModule, ButtonModule, InputTextModule, MessageModule, FormsModule],
     template: `
         <div class="flex flex-col md:flex-row gap-8">
             <div class="md:w-1/2">

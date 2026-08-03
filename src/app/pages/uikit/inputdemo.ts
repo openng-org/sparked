@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { ButtonModule } from '@openng/optimus-ui/button';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { CheckboxModule } from '@openng/optimus-ui/checkbox';
 import { RadioButtonModule } from '@openng/optimus-ui/radiobutton';
@@ -35,7 +35,6 @@ import { Country } from '@/app/pages/service/customer.service';
     selector: 'app-input-demo',
     standalone: true,
     imports: [
-        CommonModule,
         FormsModule,
         InputTextModule,
         ButtonModule,

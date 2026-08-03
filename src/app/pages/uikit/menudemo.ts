@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BreadcrumbModule } from '@openng/optimus-ui/breadcrumb';
 import { TieredMenuModule } from '@openng/optimus-ui/tieredmenu';
 import { ContextMenuModule } from '@openng/optimus-ui/contextmenu';
-import { CommonModule } from '@angular/common';
+
 import { MenuModule } from '@openng/optimus-ui/menu';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { MegaMenuModule } from '@openng/optimus-ui/megamenu';
@@ -18,7 +18,6 @@ import { InputIcon, InputIconModule } from '@openng/optimus-ui/inputicon';
     selector: 'app-menu-demo',
     standalone: true,
     imports: [
-        CommonModule,
         BreadcrumbModule,
         TieredMenuModule,
         IconFieldModule,

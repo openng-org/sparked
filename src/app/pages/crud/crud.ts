@@ -1,7 +1,7 @@
 import { Component, OnInit, signal, inject, viewChild } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { Table, TableModule } from '@openng/optimus-ui/table';
-import { CommonModule } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { RippleModule } from '@openng/optimus-ui/ripple';
@@ -35,7 +35,6 @@ interface ExportColumn {
     selector: 'app-crud',
     standalone: true,
     imports: [
-        CommonModule,
         TableModule,
         FormsModule,
         ButtonModule,
@@ -52,7 +51,8 @@ interface ExportColumn {
         TagModule,
         InputIconModule,
         IconFieldModule,
-        ConfirmDialogModule
+        ConfirmDialogModule,
+        CurrencyPipe
     ],
     template: `
         <p-toolbar styleClass="mb-6">

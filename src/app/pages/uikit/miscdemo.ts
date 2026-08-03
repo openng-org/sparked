@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AvatarModule } from '@openng/optimus-ui/avatar';
 import { AvatarGroupModule } from '@openng/optimus-ui/avatargroup';
@@ -15,7 +14,7 @@ import { TagModule } from '@openng/optimus-ui/tag';
 @Component({
     selector: 'app-misc-demo',
     standalone: true,
-    imports: [CommonModule, ProgressBarModule, BadgeModule, AvatarModule, ScrollPanelModule, TagModule, ChipModule, ButtonModule, SkeletonModule, AvatarGroupModule, ScrollTopModule, OverlayBadgeModule],
+    imports: [ProgressBarModule, BadgeModule, AvatarModule, ScrollPanelModule, TagModule, ChipModule, ButtonModule, SkeletonModule, AvatarGroupModule, ScrollTopModule, OverlayBadgeModule],
     template: `
         <div class="card">
             <div class="font-semibold text-xl mb-4">ProgressBar</div>

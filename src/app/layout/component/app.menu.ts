@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { MenuItem } from '@openng/optimus-ui/api';
 import { AppMenuitem } from './app.menuitem';
@@ -7,7 +7,7 @@ import { AppMenuitem } from './app.menuitem';
 @Component({
     selector: 'app-menu',
     standalone: true,
-    imports: [CommonModule, AppMenuitem, RouterModule],
+    imports: [AppMenuitem, RouterModule],
     template: `<ul class="layout-menu">
         @for (item of model; track item.label) {
             @if (!item.separator) {
@@ -16,7 +16,7 @@ import { AppMenuitem } from './app.menuitem';
                 <li class="menu-separator"></li>
             }
         }
-    </ul> `,
+    </ul> `
 })
 export class AppMenu {
     model: MenuItem[] = [];

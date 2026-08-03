@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'features-widget',
     standalone: true,
-    imports: [CommonModule],
+    imports: [],
     template: ` <div id="features" class="py-6 px-6 lg:px-20 mt-8 mx-0 lg:mx-20">
         <div class="grid grid-cols-12 gap-4 justify-center">
             <div class="col-span-12 text-center mt-20 mb-6">

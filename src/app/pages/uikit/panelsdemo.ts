@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from '@openng/optimus-ui/accordion';
@@ -20,24 +19,7 @@ import { ToolbarModule } from '@openng/optimus-ui/toolbar';
 @Component({
     selector: 'app-panels-demo',
     standalone: true,
-    imports: [
-        CommonModule,
-        FormsModule,
-        ToolbarModule,
-        ButtonModule,
-        RippleModule,
-        SplitButtonModule,
-        AccordionModule,
-        FieldsetModule,
-        MenuModule,
-        InputTextModule,
-        DividerModule,
-        SplitterModule,
-        PanelModule,
-        TabsModule,
-        IconFieldModule,
-        InputIconModule
-    ],
+    imports: [FormsModule, ToolbarModule, ButtonModule, RippleModule, SplitButtonModule, AccordionModule, FieldsetModule, MenuModule, InputTextModule, DividerModule, SplitterModule, PanelModule, TabsModule, IconFieldModule, InputIconModule],
     template: `
         <div class="flex flex-col">
             <div class="card">

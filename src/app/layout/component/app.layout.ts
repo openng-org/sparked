@@ -1,5 +1,5 @@
 import { Component, computed, effect, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppTopbar } from './app.topbar';
 import { AppSidebar } from './app.sidebar';
@@ -9,7 +9,7 @@ import { LayoutService } from '@/app/layout/service/layout.service';
 @Component({
     selector: 'app-layout',
     standalone: true,
-    imports: [CommonModule, AppTopbar, AppSidebar, RouterModule, AppFooter],
+    imports: [AppTopbar, AppSidebar, RouterModule, AppFooter, NgClass],
     template: `<div class="layout-wrapper" [ngClass]="containerClass()">
         <app-topbar />
         <app-sidebar />
