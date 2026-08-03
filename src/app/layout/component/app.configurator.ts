@@ -104,8 +104,6 @@ export class AppConfigurator {
 
     platformId = inject(PLATFORM_ID);
 
-    primeng = inject(Optimus);
-
     presets = Object.keys(presets);
 
     showMenuModeButton = signal(!this.router.url.includes('auth'));
