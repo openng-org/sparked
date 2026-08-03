@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from '@openng/optimus-ui/button';
@@ -12,7 +11,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
 @Component({
     selector: 'app-list-demo',
     standalone: true,
-    imports: [CommonModule, DataViewModule, FormsModule, SelectButtonModule, PickListModule, OrderListModule, TagModule, ButtonModule],
+    imports: [DataViewModule, FormsModule, SelectButtonModule, PickListModule, OrderListModule, TagModule, ButtonModule],
     template: ` <div class="flex flex-col">
         <div class="card">
             <div class="font-semibold text-xl">DataView</div>
@@ -21,7 +20,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                     <div class="flex justify-end">
                         <p-select-button [(ngModel)]="layout" [options]="options" [allowEmpty]="false">
                             <ng-template #item let-option>
-                                <i class="pi " [ngClass]="{ 'pi-bars': option === 'list', 'pi-table': option === 'grid' }"></i>
+                                <i class="pi " [class]="{ 'pi-bars': option === 'list', 'pi-table': option === 'grid' }"></i>
                             </ng-template>
                         </p-select-button>
                     </div>
@@ -31,7 +30,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                     <div class="flex flex-col">
                         @for (item of items; track item.id; let i = $index) {
                             <div>
-                                <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4" [ngClass]="{ 'border-t border-surface': i !== 0 }">
+                                <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4" [class.border-t]="i !== 0" [class.border-surface]="i !== 0">
                                     <div class="md:w-40 relative">
                                         <img class="block xl:block mx-auto rounded w-full" src="https://primefaces.org/cdn/primevue/images/product/{{ item.image }}" [alt]="item.name" />
                                         <div class="absolute bg-black/70 rounded-border" [style]="{ left: '4px', top: '4px' }">

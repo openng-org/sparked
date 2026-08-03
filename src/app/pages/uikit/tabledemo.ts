@@ -216,7 +216,7 @@ interface expandedRows {
                         <th style="min-width:200px">Status</th>
                         <th style="min-width:200px">Activity</th>
                         <th style="min-width:200px">Representative</th>
-                        <th style="min-width:200px" alignFrozen="right" pFrozenColumn [frozen]="balanceFrozen" [ngClass]="{ 'font-bold': balanceFrozen }">Balance</th>
+                        <th style="min-width:200px" alignFrozen="right" pFrozenColumn [frozen]="balanceFrozen" [class.font-bold]="balanceFrozen">Balance</th>
                     </tr>
                 </ng-template>
                 <ng-template #body let-customer>
@@ -229,7 +229,7 @@ interface expandedRows {
                         <td>{{ customer.status }}</td>
                         <td>{{ customer.activity }}</td>
                         <td>{{ customer.representative.name }}</td>
-                        <td alignFrozen="right" pFrozenColumn [frozen]="balanceFrozen" [ngClass]="{ 'font-bold': balanceFrozen }">
+                        <td alignFrozen="right" pFrozenColumn [frozen]="balanceFrozen" [class.font-bold]="balanceFrozen">
                             {{ formatCurrency(customer.balance) }}
                         </td>
                     </tr>
