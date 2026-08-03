@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, ViewChild, inject } from '@angular/core';
+import { Component, OnInit, signal, inject, viewChild } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { Table, TableModule } from '@openng/optimus-ui/table';
 import { CommonModule } from '@angular/common';
@@ -231,14 +231,14 @@ export class Crud implements OnInit {
 
     statuses!: any[];
 
-    @ViewChild('dt') dt!: Table;
+    readonly dt = viewChild.required<Table>('dt');
 
     exportColumns!: ExportColumn[];
 
     cols!: Column[];
 
     exportCSV() {
-        this.dt.exportCSV();
+        this.dt().exportCSV();
     }
 
     ngOnInit() {

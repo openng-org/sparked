@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, inject, viewChild } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { MultiSelectModule } from '@openng/optimus-ui/multiselect';
@@ -422,7 +422,7 @@ export class TableDemo implements OnInit {
 
     loading: boolean = true;
 
-    @ViewChild('filter') filter!: ElementRef;
+    readonly filter = viewChild.required<ElementRef>('filter');
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then((customers) => {
@@ -518,7 +518,7 @@ export class TableDemo implements OnInit {
 
     clear(table: Table) {
         table.clear();
-        this.filter.nativeElement.value = '';
+        this.filter().nativeElement.value = '';
     }
 
     getSeverity(status: string) {
