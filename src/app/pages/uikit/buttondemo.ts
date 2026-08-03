@@ -88,7 +88,7 @@ import { SplitButtonModule } from '@openng/optimus-ui/splitbutton';
                     </p-button>
                     <p-button type="button" outlined severity="success">
                         <img alt="logo" src="https://primefaces.org/cdn/primeng/images/logo.svg" style="width: 1.5rem" />
-                        <span class="text-bold">PrimeNG</span>
+                        <span class="text-bold">Optimus UI</span>
                     </p-button>
                 </div>
             </div>

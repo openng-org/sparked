@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         <div class="card">
             <div class="font-semibold text-2xl mb-4">Documentation</div>
             <div class="font-semibold text-xl mb-4">Get Started</div>
-            <p class="text-lg mb-4">Sakai is an application template for Angular and is distributed as a CLI project. Current versions are Angular v21 with PrimeNG v21. In case CLI is not installed already, use the command below to set it up.</p>
+            <p class="text-lg mb-4">Sakai is an application template for Angular and is distributed as a CLI project. Current versions are Angular v21 with Optimus UI v21. In case CLI is not installed already, use the command below to set it up.</p>
             <pre class="app-code">
 <code>npm install -g &#64;angular/cli</code></pre>
             <p class="text-lg mb-4">
@@ -38,7 +38,7 @@ ng serve</code></pre>
 
             <div class="font-semibold text-xl mb-4">Layout Service</div>
             <p class="text-lg mb-4">
-                <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/app/layout/service/layout.service.ts</span> is a service that manages layout state changes, including dark mode, PrimeNG theme, menu modes, and states.
+                <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/app/layout/service/layout.service.ts</span> is a service that manages layout state changes, including dark mode, Optimus UI theme, menu modes, and states.
             </p>
 
             <div class="font-semibold text-xl mb-4">Tailwind CSS</div>
@@ -46,7 +46,7 @@ ng serve</code></pre>
 
             <div class="font-semibold text-xl mb-4">Variables</div>
             <p class="text-lg mb-4">
-                CSS variables used in the template are derived from the applied PrimeNG theme. Customize them through the CSS variables in <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/assets/layout/variables</span>.
+                CSS variables used in the template are derived from the applied Optimus UI theme. Customize them through the CSS variables in <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/assets/layout/variables</span>.
             </p>
         </div>
     `,

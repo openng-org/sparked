@@ -33,7 +33,7 @@ import { LayoutService } from '@/app/layout/service/layout.service';
                         />
                     </g>
                 </svg>
-                <span>SAKAI</span>
+                <span>SPARKED</span>
             </a>
         </div>
 

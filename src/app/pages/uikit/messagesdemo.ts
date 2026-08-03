@@ -70,7 +70,7 @@ export class MessagesDemo {
         this.service.add({
             severity: 'info',
             summary: 'Info Message',
-            detail: 'PrimeNG rocks'
+            detail: 'Optimus UI rocks'
         });
     }
 
