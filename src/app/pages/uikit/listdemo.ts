@@ -32,7 +32,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                             <div>
                                 <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4" [class.border-t]="i !== 0" [class.border-surface]="i !== 0">
                                     <div class="md:w-40 relative">
-                                        <img class="block xl:block mx-auto rounded w-full" src="https://primefaces.org/cdn/primevue/images/product/{{ item.image }}" [alt]="item.name" />
+                                        <img class="block xl:block mx-auto rounded w-full" src="/demo/images/product/{{ item.image }}" [alt]="item.name" />
                                         <div class="absolute bg-black/70 rounded-border" [style]="{ left: '4px', top: '4px' }">
                                             <p-tag [value]="item.inventoryStatus" [severity]="getSeverity(item)" />
                                         </div>
@@ -78,7 +78,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                             <div class="col-span-12 sm:col-span-6 lg:col-span-4 p-2">
                                 <div class="p-6 border border-surface-200 dark:border-surface-700 bg-surface-0 dark:bg-surface-900 rounded flex flex-col">
                                     <div class="relative w-full shadow-sm">
-                                        <img class="rounded w-full" src="https://primefaces.org/cdn/primevue/images/product/{{ item.image }}" [alt]="item.name" />
+                                        <img class="rounded w-full" src="/demo/images/product/{{ item.image }}" [alt]="item.name" />
                                         <div
                                             class="absolute bg-black/70 rounded-border"
                                             [style]="{

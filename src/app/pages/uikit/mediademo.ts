@@ -18,7 +18,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                     <div class="border border-surface rounded-border m-2 p-4">
                         <div class="mb-4">
                             <div class="relative mx-auto">
-                                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
+                                <img src="/demo/images/product/{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
                                 <div class="absolute bg-black/70 rounded-border" [style]="{ 'left.px': 5, 'top.px': 5 }">
                                     <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)" />
                                 </div>
@@ -39,7 +39,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
 
         <div class="card">
             <div class="font-semibold text-xl mb-4">Image</div>
-            <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" alt="Image" width="250" />
+            <p-image src="/demo/images/galleria/galleria10.jpg" alt="Image" width="250" />
         </div>
 
         <div class="card">
