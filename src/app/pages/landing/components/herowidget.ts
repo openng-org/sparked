@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { RippleModule } from '@openng/optimus-ui/ripple';
 
 @Component({
     selector: 'hero-widget',
     imports: [ButtonModule, RippleModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
         <div
             id="hero"

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { DialogModule } from '@openng/optimus-ui/dialog';
@@ -141,6 +141,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
             </div>
         </div>
     </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [ConfirmationService, MessageService, ProductService]
 })
 export class OverlayDemo implements OnInit {

@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, inject, viewChild } from '@angular/core';
+import { Component, OnInit, signal, inject, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { Table, TableModule } from '@openng/optimus-ui/table';
 import { CurrencyPipe } from '@angular/common';
@@ -212,6 +212,7 @@ interface ExportColumn {
 
         <p-confirmdialog [style]="{ width: '450px' }" />
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [MessageService, ProductService, ConfirmationService]
 })
 export class Crud implements OnInit {

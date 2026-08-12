@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { RippleModule } from '@openng/optimus-ui/ripple';
@@ -58,6 +58,7 @@ import { filter } from 'rxjs/operators';
         '[class.active-menuitem]': 'isActive()',
         '[class.layout-root-menuitem]': 'root()'
     },
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: [
         `
             .p-submenu-enter {

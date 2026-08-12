@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { StyleClassModule } from '@openng/optimus-ui/styleclass';
 import { Router, RouterModule } from '@angular/router';
 import { RippleModule } from '@openng/optimus-ui/ripple';
@@ -8,6 +8,7 @@ import { AppFloatingConfigurator } from '@/app/layout/component/app.floatingconf
 @Component({
     selector: 'topbar-widget',
     imports: [RouterModule, StyleClassModule, ButtonModule, RippleModule, AppFloatingConfigurator],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<a class="flex items-center" href="#">
             <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 mr-2">
                 <path

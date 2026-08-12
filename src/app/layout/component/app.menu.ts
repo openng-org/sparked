@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
 import { MenuItem } from '@openng/optimus-ui/api';
@@ -8,6 +8,7 @@ import { AppMenuitem } from './app.menuitem';
     selector: 'app-menu',
     standalone: true,
     imports: [AppMenuitem, RouterModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<ul class="layout-menu">
         @for (item of model; track item.label) {
             @if (!item.separator) {

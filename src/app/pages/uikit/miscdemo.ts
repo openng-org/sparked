@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AvatarModule } from '@openng/optimus-ui/avatar';
 import { AvatarGroupModule } from '@openng/optimus-ui/avatargroup';
 import { BadgeModule } from '@openng/optimus-ui/badge';
@@ -15,6 +15,7 @@ import { TagModule } from '@openng/optimus-ui/tag';
     selector: 'app-misc-demo',
     standalone: true,
     imports: [ProgressBarModule, BadgeModule, AvatarModule, ScrollPanelModule, TagModule, ChipModule, ButtonModule, SkeletonModule, AvatarGroupModule, ScrollTopModule, OverlayBadgeModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
         <div class="card">
             <div class="font-semibold text-xl mb-4">ProgressBar</div>

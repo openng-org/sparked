@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BreadcrumbModule } from '@openng/optimus-ui/breadcrumb';
 import { TieredMenuModule } from '@openng/optimus-ui/tieredmenu';
 import { ContextMenuModule } from '@openng/optimus-ui/contextmenu';
@@ -36,6 +36,7 @@ import { InputIcon, InputIconModule } from '@openng/optimus-ui/inputicon';
         IconField,
         InputIcon
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
         <div class="card">
             <div class="font-semibold text-xl mb-4">Menubar</div>

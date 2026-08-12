@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RippleModule } from '@openng/optimus-ui/ripple';
 import { TableModule } from '@openng/optimus-ui/table';
 import { ButtonModule } from '@openng/optimus-ui/button';
@@ -34,6 +34,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
             </ng-template>
         </p-table>
     </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [ProductService]
 })
 export class RecentSalesWidget {

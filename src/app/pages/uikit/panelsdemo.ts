@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from '@openng/optimus-ui/accordion';
 import { MenuItem } from '@openng/optimus-ui/api';
@@ -20,6 +20,7 @@ import { ToolbarModule } from '@openng/optimus-ui/toolbar';
     selector: 'app-panels-demo',
     standalone: true,
     imports: [FormsModule, ToolbarModule, ButtonModule, RippleModule, SplitButtonModule, AccordionModule, FieldsetModule, MenuModule, InputTextModule, DividerModule, SplitterModule, PanelModule, TabsModule, IconFieldModule, InputIconModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
         <div class="flex flex-col">
             <div class="card">
