@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MessageService } from '@openng/optimus-ui/api';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { FileUploadModule } from '@openng/optimus-ui/fileupload';
@@ -30,6 +30,7 @@ import { ToastModule } from '@openng/optimus-ui/toast';
                 </div>
             </div>
         </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [MessageService]
 })
 export class FileDemo {

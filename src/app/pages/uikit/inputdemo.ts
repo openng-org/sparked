@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { ButtonModule } from '@openng/optimus-ui/button';
 
@@ -234,6 +234,7 @@ import { Country } from '@/app/pages/service/customer.service';
                 </div>
             </div>
         </p-fluid>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [CountryService, NodeService]
 })
 export class InputDemo implements OnInit {

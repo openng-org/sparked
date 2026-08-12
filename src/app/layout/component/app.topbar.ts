@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MenuItem } from '@openng/optimus-ui/api';
 import { RouterModule } from '@angular/router';
 
@@ -10,6 +10,7 @@ import { LayoutService } from '@/app/layout/service/layout.service';
     selector: 'app-topbar',
     standalone: true,
     imports: [RouterModule, StyleClassModule, AppConfigurator],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: ` <div class="layout-topbar">
         <div class="layout-topbar-logo-container">
             <button class="layout-menu-button layout-topbar-action" (click)="layoutService.onMenuToggle()">

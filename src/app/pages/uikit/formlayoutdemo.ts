@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FluidModule } from '@openng/optimus-ui/fluid';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { ButtonModule } from '@openng/optimus-ui/button';
@@ -10,6 +10,7 @@ import { TextareaModule } from '@openng/optimus-ui/textarea';
     selector: 'app-formlayout-demo',
     standalone: true,
     imports: [InputTextModule, FluidModule, ButtonModule, SelectModule, FormsModule, TextareaModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<p-fluid>
         <div class="flex flex-col md:flex-row gap-8">
             <div class="md:w-1/2">

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { DataViewModule } from '@openng/optimus-ui/dataview';
@@ -159,6 +159,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
             }
         }
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [ProductService]
 })
 export class ListDemo {

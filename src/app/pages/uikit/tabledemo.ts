@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, inject, viewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, inject, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ConfirmationService, MessageService } from '@openng/optimus-ui/api';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
 import { MultiSelectModule } from '@openng/optimus-ui/multiselect';
@@ -389,6 +389,7 @@ interface expandedRows {
             font-weight: bold;
         }
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [ConfirmationService, MessageService, CustomerService, ProductService]
 })
 export class TableDemo implements OnInit {

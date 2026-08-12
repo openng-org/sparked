@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { MenuModule } from '@openng/optimus-ui/menu';
 
@@ -6,6 +6,7 @@ import { MenuModule } from '@openng/optimus-ui/menu';
     standalone: true,
     selector: 'app-notifications-widget',
     imports: [ButtonModule, MenuModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<div class="card">
         <div class="flex items-center justify-between mb-6">
             <div class="font-semibold text-xl">Notifications</div>

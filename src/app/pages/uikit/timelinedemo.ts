@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TimelineModule } from '@openng/optimus-ui/timeline';
 import { CardModule } from '@openng/optimus-ui/card';
 
@@ -8,6 +8,7 @@ import { ButtonModule } from '@openng/optimus-ui/button';
     selector: 'app-timeline-demo',
     standalone: true,
     imports: [TimelineModule, ButtonModule, CardModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<div class="grid grid-cols-12 gap-8">
         <div class="col-span-12 sm:col-span-6">
             <div class="card">

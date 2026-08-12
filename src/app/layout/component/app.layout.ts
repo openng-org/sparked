@@ -1,4 +1,4 @@
-import { Component, computed, effect, inject } from '@angular/core';
+import { Component, computed, effect, inject, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppTopbar } from './app.topbar';
@@ -10,6 +10,7 @@ import { LayoutService } from '@/app/layout/service/layout.service';
     selector: 'app-layout',
     standalone: true,
     imports: [AppTopbar, AppSidebar, RouterModule, AppFooter, NgClass],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<div class="layout-wrapper" [ngClass]="containerClass()">
         <app-topbar />
         <app-sidebar />

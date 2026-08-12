@@ -1,4 +1,4 @@
-import { afterNextRender, Component, effect, inject, signal } from '@angular/core';
+import { afterNextRender, Component, effect, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ChartModule } from '@openng/optimus-ui/chart';
 import { LayoutService } from '@/app/layout/service/layout.service';
 
@@ -6,6 +6,7 @@ import { LayoutService } from '@/app/layout/service/layout.service';
     standalone: true,
     selector: 'app-revenue-stream-widget',
     imports: [ChartModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `<div class="card mb-8!">
         <div class="font-semibold text-xl mb-4">Revenue Stream</div>
         <p-chart type="bar" [data]="chartData()" [options]="chartOptions()" class="h-100" />

@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { CarouselModule } from '@openng/optimus-ui/carousel';
 import { GalleriaModule } from '@openng/optimus-ui/galleria';
@@ -53,6 +53,7 @@ import { Product, ProductService } from '@/app/pages/service/product.service';
                 </ng-template>
             </p-galleria>
         </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [ProductService, PhotoService]
 })
 export class MediaDemo implements OnInit {

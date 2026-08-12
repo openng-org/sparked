@@ -1,4 +1,4 @@
-import { Component, effect, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { ChartModule } from '@openng/optimus-ui/chart';
 import { FluidModule } from '@openng/optimus-ui/fluid';
 import { LayoutService } from '@/app/layout/service/layout.service';
@@ -7,6 +7,7 @@ import { LayoutService } from '@/app/layout/service/layout.service';
     selector: 'app-chart-demo',
     standalone: true,
     imports: [ChartModule, FluidModule],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
         <p-fluid class="grid grid-cols-12 gap-8">
             <div class="col-span-12 xl:col-span-6">
