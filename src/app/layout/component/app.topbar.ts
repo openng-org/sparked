@@ -1,15 +1,19 @@
-import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { MenuItem } from '@openng/optimus-ui/api';
 import { RouterModule } from '@angular/router';
+
+import { SelectModule } from '@openng/optimus-ui/select';
 
 import { StyleClassModule } from '@openng/optimus-ui/styleclass';
 import { AppConfigurator } from './app.configurator';
 import { LayoutService } from '@/app/layout/service/layout.service';
+import { LanguageService, LanguageType } from '../service/language.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-topbar',
     standalone: true,
-    imports: [RouterModule, StyleClassModule, AppConfigurator],
+    imports: [RouterModule, StyleClassModule, FormsModule, SelectModule, AppConfigurator],
     changeDetection: ChangeDetectionStrategy.Eager,
     template: ` <div class="layout-topbar">
         <div class="layout-topbar-logo-container">
@@ -65,32 +69,60 @@ import { LayoutService } from '@/app/layout/service/layout.service';
 
             <div class="layout-topbar-menu hidden lg:block">
                 <div class="layout-topbar-menu-content">
-                    <button type="button" class="layout-topbar-action">
+                    <button type="button" class="layout-topbar-action !pl-0">
                         <i class="pi pi-calendar"></i>
                         <span>Calendar</span>
                     </button>
-                    <button type="button" class="layout-topbar-action">
+                    <button type="button" class="layout-topbar-action !pl-0">
                         <i class="pi pi-inbox"></i>
                         <span>Messages</span>
                     </button>
-                    <button type="button" class="layout-topbar-action">
+                    <button type="button" class="layout-topbar-action !pl-0">
                         <i class="pi pi-user"></i>
                         <span>Profile</span>
                     </button>
+
+                    <p-select (onChange)="onChangeLang()" [(ngModel)]="selectedLanguage" [options]="languageService.languages" optionLabel="name" placeholder="Select a Status" inputId="language" fluid class="w-40!">
+                        <ng-template #selectedItem let-selectedOption>
+                            @if (selectedLanguage) {
+                                <div class="flex items-center py-1 rounded-border">
+                                    <span [class]="'mr-2 flag flag-' + selectedOption.code.toLowerCase()" style="width: 18px; height: 12px"></span>
+                                    <div>{{ selectedOption.name }}</div>
+                                </div>
+                            }
+                        </ng-template>
+                        <ng-template #item let-languajeOption>
+                            <div class="flex items-center">
+                                <span [class]="'mr-2 flag flag-' + languajeOption.code.toLowerCase()" style="width: 18px; height: 12px"></span>
+                                <div>{{ languajeOption.name }}</div>
+                            </div>
+                        </ng-template>
+                    </p-select>
                 </div>
             </div>
         </div>
     </div>`
 })
-export class AppTopbar {
+export class AppTopbar implements OnInit {
     items!: MenuItem[];
 
     layoutService = inject(LayoutService);
+    languageService: LanguageService = inject(LanguageService);
+    selectedLanguage!: LanguageType;
+
+    ngOnInit(): void {
+        this.selectedLanguage = this.languageService.findLanguage();
+        this.languageService.onChangeLanguage();
+    }
 
     toggleDarkMode() {
         this.layoutService.layoutConfig.update((state) => ({
             ...state,
             darkTheme: !state.darkTheme
         }));
+    }
+
+    onChangeLang(): void {
+        this.languageService.setLanguage(this.selectedLanguage.lang);
     }
 }

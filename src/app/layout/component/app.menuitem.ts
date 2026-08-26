@@ -4,18 +4,19 @@ import { NgClass } from '@angular/common';
 import { RippleModule } from '@openng/optimus-ui/ripple';
 import { LayoutService } from '@/app/layout/service/layout.service';
 import { filter } from 'rxjs/operators';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
     selector: '[app-menuitem]',
-    imports: [RouterModule, RippleModule, NgClass],
+    imports: [RouterModule, RippleModule, NgClass, TranslatePipe],
     template: `
         @if (root() && isVisible()) {
-            <div class="layout-menuitem-root-text">{{ item().label }}</div>
+            <div class="layout-menuitem-root-text">{{ item().label | translate }}</div>
         }
         @if ((!hasRouterLink() || hasChildren()) && isVisible()) {
             <a [attr.href]="item().url" (click)="itemClick($event)" [ngClass]="item().class" [attr.target]="item().target" tabindex="0" pRipple>
                 <i [ngClass]="item().icon" class="layout-menuitem-icon"></i>
-                <span class="layout-menuitem-text">{{ item().label }}</span>
+                <span class="layout-menuitem-text">{{ item().label | translate }}</span>
                 @if (hasChildren()) {
                     <i class="pi pi-fw pi-angle-down layout-submenu-toggler"></i>
                 }
@@ -40,7 +41,7 @@ import { filter } from 'rxjs/operators';
                 pRipple
             >
                 <i [ngClass]="item().icon" class="layout-menuitem-icon"></i>
-                <span class="layout-menuitem-text">{{ item().label }}</span>
+                <span class="layout-menuitem-text">{{ item().label | translate }}</span>
                 @if (hasChildren()) {
                     <i class="pi pi-fw pi-angle-down layout-submenu-toggler"></i>
                 }

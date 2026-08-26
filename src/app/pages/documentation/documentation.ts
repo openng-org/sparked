@@ -48,6 +48,15 @@ ng serve</code></pre>
             <p class="text-lg mb-4">
                 CSS variables used in the template are derived from the applied Optimus UI theme. Customize them through the CSS variables in <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">src/assets/layout/variables</span>.
             </p>
+
+            <div class="font-semibold text-xl mb-4">i18n</div>
+            <p class="text-lg mb-4">
+                The Optimus UI theme can be translated into several languages using <a href="https://ngx-translate.org" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">ngx-translator</a>;
+                support for English and Spanish has been added as examples.
+                If you want to add new translation files, you can modify or add new language files.
+                You can view the translations in the folder.
+                <span class="bg-highlight px-2 py-1 rounded-border not-italic text-base">public/i18n</span>
+            </p>
         </div>
     `,
     changeDetection: ChangeDetectionStrategy.Eager,
@@ -70,4 +79,4 @@ ng serve</code></pre>
         }
     `
 })
-export class Documentation {}
+export class Documentation { }
