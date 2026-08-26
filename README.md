@@ -10,7 +10,7 @@ Sparked is an [Angular](https://angular.dev) application template built with [Op
 
 ## Tech stack
 
-- [Angular 21](https://angular.dev) (standalone components)
+- [Angular 22](https://angular.dev) (standalone components)
 - [Optimus UI](https://www.npmjs.com/package/@openng/optimus-ui) component library, themes, and icons
 - [Tailwind CSS 4](https://tailwindcss.com)
 - [Chart.js](https://www.chartjs.org) for charts
@@ -19,7 +19,7 @@ Sparked is an [Angular](https://angular.dev) application template built with [Op
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org) (version supported by Angular 21)
+- [Node.js](https://nodejs.org) (version supported by Angular 22)
 - [pnpm](https://pnpm.io) — this project uses pnpm as its package manager
 
 ### Installation
