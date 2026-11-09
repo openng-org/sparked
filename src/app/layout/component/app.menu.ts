@@ -159,7 +159,7 @@ export class AppMenu {
                     {
                         label: 'View Source',
                         icon: 'pi pi-fw pi-github',
-                        url: 'https://github.com/primefaces/sakai-ng',
+                        url: 'https://github.com/openng-org/sparked',
                         target: '_blank'
                     }
                 ]
